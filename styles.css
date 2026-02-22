@@ -1,9 +1,15 @@
+/* ============================================
+   RESET & BASE STYLES
+   ============================================ */
+
+/* Global reset: removes default margins/padding, sets box-sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Main page container: centers content, sets background and typography */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +20,11 @@ body {
     padding: 20px;
 }
 
+/* ============================================
+   LAYOUT CONTAINERS
+   ============================================ */
+
+/* Cards wrapper: horizontal flex layout with 24px gap */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +34,11 @@ body {
     align-items: flex-start;
 }
 
+/* ============================================
+   CARD COMPONENT
+   ============================================ */
+
+/* Individual pricing card: vertical flex, fixed width, beige background */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,11 +50,13 @@ body {
     flex-shrink: 0;
 }
 
+/* Card header section: contains title, price, and features */
 .card-top {
     display: flex;
     flex-direction: column;
 }
 
+/* Plan name: Hobby, Pro, etc. */
 .card-title {
     font-size: 22px;
     line-height: 28px;
@@ -47,6 +65,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price container: flex layout for amount and period alignment */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -54,32 +73,38 @@ body {
     align-items: baseline;
 }
 
+/* Price amount: main price value (e.g., "$20", "Free") */
 .card-price-amount {
     font-size: 22px;
     font-weight: 400;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Price period: billing frequency (e.g., "/mo.") */
 .card-price-period {
     font-size: 14px;
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* Features section: spacing between price and feature list */
 .card-content {
     margin-bottom: 32px;
 }
 
+/* "Includes:" or "Everything in Hobby, plus:" text */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
     margin: 16px 0px;
 }
 
+/* Feature list: removes default bullets, no padding */
 .features-list {
     list-style: none;
     padding: 0;
 }
 
+/* Feature item: flex row with checkmark and text */
 .features-list li {
     display: flex;
     align-items: center;
@@ -88,6 +113,7 @@ body {
     color: #26251e;
 }
 
+/* Checkmark icon: positioned before feature text */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +121,11 @@ body {
     font-weight: 400;
 }
 
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+/* Base button: rounded pill shape, auto margin pushes to bottom */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -109,27 +140,57 @@ body {
     transition: background-color 0.2s ease;
 }
 
+/* Secondary button hover state */
 .download-button:hover {
     background-color: #D8D6CE;
 }
 
+/* Secondary button active/pressed state */
 .download-button:active {
     background-color: #D8D6CE;
 }
 
+/* Primary button: dark background variant */
 .download-button.primary {
     background-color: #111;
     color: #fff;
 }
 
+/* Primary button hover state */
 .download-button.primary:hover {
     background-color: #333;
 }
 
+/* Primary button active/pressed state */
 .download-button.primary:active {
     background-color: #333;
 }
 
+.download-button.terciary {
+    background-color: transparent;
+    border: 1px solid #c2c1ba;
+    color: #333;
+}
+
+/* Tertiary button hover state */
+.download-button.terciary:hover {
+    background-color: rgba(194, 193, 186, 0.1);
+    border-color: #a5a49d;
+}
+
+/* Tertiary button active/pressed state */
+.download-button.terciary:active {
+    background-color: rgba(194, 193, 186, 0.2);
+    border-color: #a5a49d;
+}
+
+
+
+/* ============================================
+   PAGE LABEL
+   ============================================ */
+
+/* Version indicator: fixed at top center of viewport */
 .page-label {
     position: fixed;
     top: 16px;
@@ -143,6 +204,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
+/* Bold text within page label */
 .page-label strong {
     color: #333;
 }
