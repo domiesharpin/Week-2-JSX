@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Document metadata -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pricing Plans — HTML version</title>
+    
+    <!-- Google Fonts: Preconnect for performance optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Inter font family: weights 400, 500, 600, 700 -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Page version indicator (fixed at top) -->
     <p class="page-label"><strong>HTML version</strong> — static markup</p>
+    
+    <!-- Pricing cards container: flex layout for side-by-side cards -->
     <div class="cards-container">
+        
+        <!-- Hobby Plan Card -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Hobby</h3>
@@ -36,8 +48,11 @@
                     </ul>
                 </div>
             </div>
+            <!-- Secondary button style -->
             <button class="download-button secondary">Download</button>
         </div>
+        
+        <!-- Pro Plan Card -->
         <div class="card">
             <div class="card-top">
                 <h3 class="card-title">Pro</h3>
@@ -67,8 +82,43 @@
                     </ul>
                 </div>
             </div>
+            <!-- Primary button style (dark background) -->
             <button class="download-button primary">Get Pro</button>
         </div>
+        
+        <!-- Enterprise Plan Card -->
+        <div class="card">
+            <div class="card-top">
+                <h3 class="card-title">Enterprise</h3>
+                <p class="card-price">
+                    <span class="card-price-amount">Custom</span>
+                </p>
+                <div class="card-content">
+                    <p class="includes-text">Everything in Pro, plus:</p>
+                    <ul class="features-list">
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Dedicated support
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Custom integrations
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Advanced security
+                        </li>
+                        <li>
+                            <span class="checkmark">✓</span>
+                            Team management tools
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Primary button style (dark background) -->
+            <button class="download-button primary">Contact Sales</button>
+        </div>
+        
     </div>
 </body>
 </html>
